@@ -1,0 +1,16 @@
+
+<h1 style='font-size: 40px; color: red'>DJANGO UNCHAINED APP from the DEADLY PYTHON SQUAD</h1>
+
+<img src='http://a.images.blip.tv/JustSeenItMovies-DjangoUnchainedMovieReviewJustSeenIt466-508.jpg'/>
+
+<img src='http://static.tumblr.com/fe64cc1e921390ff1064256bcc8f7a21/jxjyfri/nRUmmbeyf/tumblr_static_deadly-viper-assassination-squad-chapel.png'/>
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li style='font-size: 26px'><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
